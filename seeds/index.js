@@ -10,7 +10,7 @@ if (process.env.NODE_ENV !== 'production') {
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
 
 
-mongoose.connect(dbUrl, {
+mongoose.connect('mongodb+srv://primer_usuario:ue1LhAbBaA1YIZTh@cluster0.cjmxh.mongodb.net/yelp-camp?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true
