@@ -23,7 +23,8 @@ const MongoStore = require("connect-mongo");
 
 const dbUrl = process.env.DB_URL || 'mongodb://localhost:27017/yelp-camp';
 
-mongoose.connect('mongodb+srv://primer_usuario:ue1LhAbBaA1YIZTh@cluster0.cjmxh.mongodb.net/yelp-camp?retryWrites=true&w=majority', {
+
+mongoose.connect(dbUrl, {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
@@ -115,7 +116,7 @@ app.use(
                 "'self'",
                 "blob:",
                 "data:",
-                "https://res.cloudinary.com/douqbebwk/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
+                "https://res.cloudinary.com/dnbcybvgn/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT! 
                 "https://images.unsplash.com/",
             ],
             fontSrc: ["'self'", ...fontSrcUrls],
